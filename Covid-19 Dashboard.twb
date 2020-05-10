@@ -1,0 +1,2946 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20193.20.0119.2058                               -->
+<workbook original-version='18.1' source-build='2019.3.4 (20193.20.0119.2058)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <MapboxVectorStylesAndLayers />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <VizInTooltipHideWorksheet />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='covid_19_data' inline='true' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='covid_19_data' name='textscan.17ul192067719r1cjzbib1fuhmiv'>
+            <connection class='textscan' directory='C:/Users/Sindhu/Desktop/Kaggle/Covid 19 data' filename='covid_19_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.17ul192067719r1cjzbib1fuhmiv' name='covid_19_data.csv' table='[covid_19_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='SNo' ordinal='0' />
+            <column datatype='date' name='ObservationDate' ordinal='1' />
+            <column datatype='string' name='Province/State' ordinal='2' />
+            <column datatype='string' name='Country/Region' ordinal='3' />
+            <column datatype='string' name='Last Update' ordinal='4' />
+            <column datatype='real' name='Confirmed' ordinal='5' />
+            <column datatype='real' name='Deaths' ordinal='6' />
+            <column datatype='real' name='Recovered' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[covid_19_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SNo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SNo]</local-name>
+            <parent-name>[covid_19_data.csv]</parent-name>
+            <remote-alias>SNo</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ObservationDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[ObservationDate]</local-name>
+            <parent-name>[covid_19_data.csv]</parent-name>
+            <remote-alias>ObservationDate</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Province/State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Province/State]</local-name>
+            <parent-name>[covid_19_data.csv]</parent-name>
+            <remote-alias>Province/State</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country/Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country/Region]</local-name>
+            <parent-name>[covid_19_data.csv]</parent-name>
+            <remote-alias>Country/Region</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Last Update</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Last Update]</local-name>
+            <parent-name>[covid_19_data.csv]</parent-name>
+            <remote-alias>Last Update</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Confirmed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Confirmed]</local-name>
+            <parent-name>[covid_19_data.csv]</parent-name>
+            <remote-alias>Confirmed</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Deaths</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Deaths]</local-name>
+            <parent-name>[covid_19_data.csv]</parent-name>
+            <remote-alias>Deaths</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Recovered</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Recovered]</local-name>
+            <parent-name>[covid_19_data.csv]</parent-name>
+            <remote-alias>Recovered</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Country/Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <aliases>
+          <alias key='&quot;Mainland China&quot;' value='China' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Province/State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='S No' datatype='integer' name='[SNo]' role='measure' type='quantitative' />
+      <group caption='Tooltip (Country/Region,Observation Date)' hidden='true' name='[Tooltip (Country/Region,Observation Date)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Country/Region]' />
+          <groupfilter function='level-members' level='[ObservationDate]' />
+        </groupfilter>
+      </group>
+      <group caption='Tooltip (Observation Date)' hidden='true' name='[Tooltip (Observation Date)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[ObservationDate]' />
+        </groupfilter>
+      </group>
+      <drill-paths>
+        <drill-path name='Country/Region, Province/State'>
+          <field>[Country/Region]</field>
+          <field>[Province/State]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.453435' measure-ordering='alphabetic' measure-percentage='0.546565' show-aliased-fields='true' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='SNo' />
+        <field-sort-custom-order field='Calculation_55450614516482048' />
+        <field-sort-custom-order field='ObservationDate' />
+        <field-sort-custom-order field='Province/State' />
+        <field-sort-custom-order field='Country/Region' />
+        <field-sort-custom-order field='Last Update' />
+        <field-sort-custom-order field='Confirmed' />
+        <field-sort-custom-order field='Deaths' />
+        <field-sort-custom-order field='Recovered' />
+      </field-sort-info>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name=' Confirmed Deaths'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_19_data' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vukj5x0ksnnzd1da2i0f0e6jtus'>
+            <column datatype='real' name='[Deaths]' role='measure' type='quantitative' />
+            <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Deaths]' derivation='Sum' name='[sum:Deaths:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='1' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='display' class='1' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' scope='rows' value='' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='div-level' scope='rows' value='2' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Deaths:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='20'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5966851711273193' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Deaths:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='20'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5966851711273193' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Deaths:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='20'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5966851711273193' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk] + [federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk])</rows>
+        <cols>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]</cols>
+        <pages>
+          <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{B3C93057-68AF-4A31-B568-3B9FD1FD6DC7}' />
+    </worksheet>
+    <worksheet name='Confirmed Cases'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_19_data' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vukj5x0ksnnzd1da2i0f0e6jtus'>
+            <column datatype='real' name='[Confirmed]' role='measure' type='quantitative' />
+            <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Confirmed]' derivation='Sum' name='[sum:Confirmed:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='display' class='1' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' scope='rows' value='false' />
+            <encoding attr='space' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' field-type='quantitative' major-origin='0.0' major-spacing='300000.0' scope='rows' type='space' />
+            <format attr='display' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]' scope='cols' value='false' />
+            <format attr='title' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' scope='rows' value='' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' value='8' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#787878'>Æ </run>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Confirmed:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='16'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f9a655' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#787878'>Æ </run>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Confirmed:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='16'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5966851711273193' />
+                <format attr='mark-color' value='#f9a655' />
+                <format attr='mark-transparency' value='185' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#787878'>Æ </run>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Confirmed:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='16'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5966851711273193' />
+                <format attr='mark-color' value='#f9a655' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk] + [federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk])</rows>
+        <cols>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]</cols>
+        <pages>
+          <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{ECF0BB50-3387-4D0E-8A75-073A58DCC496}' />
+    </worksheet>
+    <worksheet name='Confirmed Cases Ban'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_19_data' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vukj5x0ksnnzd1da2i0f0e6jtus'>
+            <column datatype='real' name='[Confirmed]' role='measure' type='quantitative' />
+            <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Confirmed]' derivation='Sum' name='[sum:Confirmed:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run>&lt;Sheet name=&quot;Confirmed Cases Bars (Province)&quot; maxwidth=&quot;300&quot; maxheight=&quot;300&quot; filter=&quot;&lt;All Fields&gt;&quot;&gt;&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#ffffff' fontsize='14'>Confirmed Cases</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#f28e2b' fontsize='18'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+                <format attr='wrap' value='on' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <pages>
+          <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</column>
+        </pages>
+        <page-trail-options mark-type='all' />
+      </table>
+      <simple-id uuid='{62966955-DA5F-44DC-89AB-F00EFC05A724}' />
+    </worksheet>
+    <worksheet name='Confirmed Cases Bars'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff' fontsize='8'>Top 10 Countries with Confirmed Cases</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_19_data' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vukj5x0ksnnzd1da2i0f0e6jtus'>
+            <column datatype='real' name='[Confirmed]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Country/Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <aliases>
+                <alias key='&quot;Mainland China&quot;' value='China' />
+              </aliases>
+            </column>
+            <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+            <column-instance column='[Country/Region]' derivation='None' name='[none:Country/Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Confirmed]' derivation='Sum' name='[sum:Confirmed:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end'>
+              <groupfilter direction='DESC' expression='SUM(IF[ObservationDate] = #4/21/2020# THEN [Confirmed]END)' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Country/Region:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;US&quot;</bucket>
+              <bucket>&quot;Spain&quot;</bucket>
+              <bucket>&quot;Italy&quot;</bucket>
+              <bucket>&quot;France&quot;</bucket>
+              <bucket>&quot;Germany&quot;</bucket>
+              <bucket>&quot;UK&quot;</bucket>
+              <bucket>&quot;Turkey&quot;</bucket>
+              <bucket>&quot;Iran&quot;</bucket>
+              <bucket>&quot;Mainland China&quot;</bucket>
+              <bucket>&quot;Russia&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' value='121' />
+            <format attr='display' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' scope='cols' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]' value='26' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'>&lt;Sheet name=&quot;Confirmed Cases Bars (Province)&quot; maxwidth=&quot;300&quot; maxheight=&quot;300&quot; filter=&quot;&lt;All Fields&gt;&quot;&gt;</run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#f9a655' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]</rows>
+        <cols>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]</cols>
+        <pages>
+          <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{4DB38A52-E561-47BD-9F70-217B312E1BAD}' />
+    </worksheet>
+    <worksheet name='Confirmed Cases Bars (Province)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_19_data' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vukj5x0ksnnzd1da2i0f0e6jtus'>
+            <column datatype='real' name='[Confirmed]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Country/Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <aliases>
+                <alias key='&quot;Mainland China&quot;' value='China' />
+              </aliases>
+            </column>
+            <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Province/State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Country/Region]' derivation='None' name='[none:Country/Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Province/State]' derivation='None' name='[none:Province/State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Confirmed]' derivation='Sum' name='[sum:Confirmed:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Tooltip (Country/Region,Observation Date)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Confirmed Cases Bars (Province)]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country/Region]' />
+              <groupfilter function='level-members' level='[ObservationDate]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Tooltip (Observation Date)]'>
+            <groupfilter function='level-members' level='[ObservationDate]' user:ui-action-filter='[Action - Confirmed Cases Bars (Province)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end'>
+              <groupfilter direction='DESC' expression='SUM(IF[ObservationDate] = #4/21/2020# THEN [Confirmed]END)' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Country/Region:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Province/State:nk]' />
+              <groupfilter function='member' level='[none:Province/State:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]' direction='DESC' using='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' />
+          <slices>
+            <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]</column>
+            <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]</column>
+            <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Tooltip (Country/Region,Observation Date)]</column>
+            <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Tooltip (Observation Date)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' value='121' />
+            <format attr='display' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' scope='cols' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]' value='26' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#f9a655' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]</rows>
+        <cols>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]</cols>
+        <pages>
+          <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{8FDF16E8-28AA-4292-B64B-4353FFBBA3A8}' />
+    </worksheet>
+    <worksheet name='Confirmed Cases(log)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_19_data' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vukj5x0ksnnzd1da2i0f0e6jtus'>
+            <column datatype='real' name='[Confirmed]' role='measure' type='quantitative' />
+            <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Confirmed]' derivation='Sum' name='[sum:Confirmed:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='1' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' field-type='quantitative' scale='log' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' scope='rows' value='' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='tick-color' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' value='8' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#787878'>Æ </run>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Confirmed:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='16'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f9a655' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#787878'>Æ </run>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Confirmed:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='16'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5966851711273193' />
+                <format attr='mark-color' value='#f9a655' />
+                <format attr='mark-transparency' value='185' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#787878'>Æ </run>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Confirmed:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='16'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5966851711273193' />
+                <format attr='mark-color' value='#f9a655' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk] + [federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk])</rows>
+        <cols>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]</cols>
+        <pages>
+          <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{445442EC-B2E5-4808-8324-B861CB2D44B5}' />
+    </worksheet>
+    <worksheet name='Confirmed Deaths (log)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_19_data' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vukj5x0ksnnzd1da2i0f0e6jtus'>
+            <column datatype='real' name='[Deaths]' role='measure' type='quantitative' />
+            <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Deaths]' derivation='Sum' name='[sum:Deaths:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]' scope='cols' value='false' />
+            <encoding attr='space' class='1' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='1' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' scope='rows' value='' />
+            <encoding attr='space' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' field-type='quantitative' scale='log' scope='rows' type='space' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='div-level' scope='rows' value='2' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Deaths:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='20'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5966851711273193' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Deaths:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='20'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5966851711273193' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]&gt;</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run fontalignment='1' fontcolor='#787878'>Deaths:</run>
+                <run fontalignment='1'>Æ&#10;</run>
+                <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontsize='20'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5966851711273193' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk] + [federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk])</rows>
+        <cols>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]</cols>
+        <pages>
+          <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{C009CC3C-8345-4665-9ED5-E3D7FFA4CCD8}' />
+    </worksheet>
+    <worksheet name='Confirmed Deaths Ban '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_19_data' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vukj5x0ksnnzd1da2i0f0e6jtus'>
+            <column datatype='real' name='[Confirmed]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Deaths]' role='measure' type='quantitative' />
+            <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Confirmed]' derivation='Sum' name='[sum:Confirmed:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Deaths]' derivation='Sum' name='[sum:Deaths:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' value='#e15759' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' />
+              <text column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run>&lt;Sheet name=&quot;Confirmed Deaths Bars (Province) &quot; maxwidth=&quot;300&quot; maxheight=&quot;300&quot; filter=&quot;&lt;All Fields&gt;&quot;&gt;&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#ffffff' fontsize='14'>Confirmed Deaths</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='18'>&lt;[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+                <format attr='wrap' value='on' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <pages>
+          <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</column>
+        </pages>
+        <page-trail-options mark-type='all' />
+      </table>
+      <simple-id uuid='{380C1963-315B-4602-A6BB-08A1BABA0F85}' />
+    </worksheet>
+    <worksheet name='Confirmed Deaths Bars'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff' fontsize='8'>Top 10 Countries with Confirmed Deaths</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_19_data' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vukj5x0ksnnzd1da2i0f0e6jtus'>
+            <column datatype='string' name='[Country/Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <aliases>
+                <alias key='&quot;Mainland China&quot;' value='China' />
+              </aliases>
+            </column>
+            <column datatype='real' name='[Deaths]' role='measure' type='quantitative' />
+            <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+            <column-instance column='[Country/Region]' derivation='None' name='[none:Country/Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Deaths]' derivation='Sum' name='[sum:Deaths:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end'>
+              <groupfilter direction='DESC' expression='SUM(IF[ObservationDate] = #4/21/2020# THEN [Deaths]END)' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Country/Region:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;US&quot;</bucket>
+              <bucket>&quot;Italy&quot;</bucket>
+              <bucket>&quot;Spain&quot;</bucket>
+              <bucket>&quot;France&quot;</bucket>
+              <bucket>&quot;UK&quot;</bucket>
+              <bucket>&quot;Belgium&quot;</bucket>
+              <bucket>&quot;Iran&quot;</bucket>
+              <bucket>&quot;Germany&quot;</bucket>
+              <bucket>&quot;Mainland China&quot;</bucket>
+              <bucket>&quot;Netherlands&quot;</bucket>
+              <bucket>&quot;Turkey&quot;</bucket>
+              <bucket>&quot;Russia&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' scope='cols' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]' value='26' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'>&lt;Sheet name=&quot;Confirmed Deaths Bars (Province) &quot; maxwidth=&quot;300&quot; maxheight=&quot;300&quot; filter=&quot;&lt;All Fields&gt;&quot;&gt;</run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]</rows>
+        <cols>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]</cols>
+        <pages>
+          <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{A52850BC-280C-488A-AF4A-35B4197313B7}' />
+    </worksheet>
+    <worksheet name='Confirmed Deaths Bars (Province) '>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_19_data' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vukj5x0ksnnzd1da2i0f0e6jtus'>
+            <column datatype='string' name='[Country/Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <aliases>
+                <alias key='&quot;Mainland China&quot;' value='China' />
+              </aliases>
+            </column>
+            <column datatype='real' name='[Deaths]' role='measure' type='quantitative' />
+            <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Province/State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Country/Region]' derivation='None' name='[none:Country/Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Province/State]' derivation='None' name='[none:Province/State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Deaths]' derivation='Sum' name='[sum:Deaths:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Tooltip (Country/Region,Observation Date)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Confirmed Deaths Bars (Province) ]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Country/Region]' />
+              <groupfilter function='level-members' level='[ObservationDate]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Tooltip (Observation Date)]'>
+            <groupfilter function='level-members' level='[ObservationDate]' user:ui-action-filter='[Action - Confirmed Deaths Bars (Province) ]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end'>
+              <groupfilter direction='DESC' expression='SUM(IF[ObservationDate] = #4/21/2020# THEN [Deaths]END)' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Country/Region:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Province/State:nk]' />
+              <groupfilter function='member' level='[none:Province/State:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]' direction='DESC' using='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' />
+          <slices>
+            <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]</column>
+            <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]</column>
+            <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Tooltip (Country/Region,Observation Date)]</column>
+            <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Tooltip (Observation Date)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' scope='cols' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]' value='26' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]</rows>
+        <cols>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Deaths:qk]</cols>
+        <pages>
+          <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{FF43E79D-6308-4B28-A555-FDEA1468C9F4}' />
+    </worksheet>
+    <worksheet name='Map'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff'>Confirmed Cases</run>
+            <run fontalignment='1'>Æ </run>
+            <run fontalignment='1' fontcolor='#ffffff'>-</run>
+            <run fontalignment='1'>Æ </run>
+            <run fontalignment='1' fontcolor='#f28e2b'>&lt;Page Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_19_data' name='federated.0vukj5x0ksnnzd1da2i0f0e6jtus' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0vukj5x0ksnnzd1da2i0f0e6jtus'>
+            <column datatype='real' name='[Confirmed]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Country/Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <aliases>
+                <alias key='&quot;Mainland China&quot;' value='China' />
+              </aliases>
+            </column>
+            <column caption='Observation Date' datatype='date' name='[ObservationDate]' role='dimension' type='ordinal' />
+            <column-instance column='[Country/Region]' derivation='None' name='[none:Country/Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[ObservationDate]' derivation='None' name='[none:ObservationDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Confirmed]' derivation='Sum' name='[sum:Confirmed:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Longitude (generated)]' field-type='quantitative' max='25316188.426896863' min='-20949983.283890646' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Latitude (generated)]' field-type='quantitative' max='20550533.094705585' min='-19980695.471975647' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='wrap' value='off' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='wrap' value='off' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f0e7da</color>
+                <color>#efdec3</color>
+                <color>#eed5ac</color>
+                <color>#edcc96</color>
+                <color>#ecc380</color>
+                <color>#ebba6a</color>
+                <color>#eab154</color>
+                <color>#e9a83e</color>
+                <color>#e89f29</color>
+                <color>#e79714</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='cols' value='5' />
+            <format attr='band-size' scope='rows' value='5' />
+            <format attr='background-color' value='#00000000' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='border-color' value='#ffffff' />
+            <format attr='background-color' value='#00000000' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='div-level' scope='rows' value='0' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='background-color' value='#000000' />
+            <format attr='border-width' value='0' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='Coastline' value='true' />
+            <format attr='enabled' id='background' value='false' />
+            <format attr='enabled' id='barrier_line-land-polygon' value='false' />
+            <format attr='enabled' id='barrier_line-land-line' value='false' />
+            <format attr='enabled' id='national_park' value='false' />
+            <format attr='enabled' id='pitch' value='false' />
+            <format attr='enabled' id='industrial' value='false' />
+            <format attr='enabled' id='built-up-area' value='false' />
+            <format attr='enabled' id='water' value='false' />
+            <format attr='enabled' id='waterway-river-canal' value='false' />
+            <format attr='enabled' id='aeroway-polygon' value='false' />
+            <format attr='enabled' id='aeroway-runway' value='false' />
+            <format attr='enabled' id='aeroway-taxiway' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.059999998658895493' />
+            <format attr='map-style' value='dark' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' />
+              <size column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' />
+              <lod column='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.6591712236404419' />
+                <format attr='mark-color' value='#f28e2b' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#c0c0c0' />
+                <format attr='has-halo' value='true' />
+                <format attr='halo-color' value='#d4d4d4' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Latitude (generated)]</rows>
+        <cols>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[Longitude (generated)]</cols>
+        <pages>
+          <column>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{130BC301-9044-475E-A76B-7DE7C270D252}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#ffffff'>Covid-19 Confirmed Cases by Location</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#000000' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='text-align' value='left' />
+          <format attr='border-width' value='0' />
+          <format attr='background-color' value='#000000' />
+        </style-rule>
+      </style>
+      <size maxheight='768' maxwidth='1524' minheight='768' minwidth='1524' preset-index='2' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='34' param='horz' type='layout-flow' w='98950' x='525' y='1042'>
+            <zone h='97916' id='29' param='horz' type='layout-flow' w='98950' x='525' y='1042'>
+              <zone h='97916' id='24' param='vert' type='layout-flow' w='98950' x='525' y='1042'>
+                <zone h='7552' id='25' type='title' w='98950' x='525' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='90364' id='22' param='vert' type='layout-flow' w='98950' x='525' y='8594'>
+                  <zone h='90364' id='20' param='vert' type='layout-flow' w='98950' x='525' y='8594'>
+                    <zone h='90364' id='18' type='layout-basic' w='98950' x='525' y='8594'>
+                      <zone h='90364' id='7' param='horz' type='layout-flow' w='73489' x='525' y='8594'>
+                        <zone h='90364' id='5' type='layout-basic' w='48030' x='525' y='8594'>
+                          <zone h='90364' id='3' name='Map' w='48030' x='525' y='8594'>
+                            <zone-style>
+                              <format attr='border-color' value='#000000' />
+                              <format attr='border-style' value='none' />
+                              <format attr='border-width' value='0' />
+                              <format attr='margin' value='4' />
+                            </zone-style>
+                          </zone>
+                        </zone>
+                        <zone fixed-size='388' h='90364' id='31' is-fixed='true' type='layout-basic' w='25459' x='48555' y='8594'>
+                          <zone h='51823' id='6' param='vert' type='layout-flow' w='25459' x='48555' y='8594'>
+                            <zone fixed-size='94' h='13282' id='26' is-fixed='true' name='Confirmed Cases Ban' show-title='false' w='25459' x='48555' y='8594'>
+                              <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                            <zone h='38541' id='10' name='Confirmed Cases' show-title='false' w='25459' x='48555' y='21876'>
+                              <layout-cache minheight='100' minwidth='191' type-h='scalable' type-w='scalable' />
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                          </zone>
+                          <zone h='38541' id='32' param='vert' type='layout-flow' w='25459' x='48555' y='60417'>
+                            <zone h='38538' id='30' name='Confirmed Cases Bars' w='25459' x='48555' y='60417'>
+                              <layout-cache cell-count-h='10' non-cell-size-h='38' type-h='cell' type-w='fixed' />
+                              <zone-style>
+                                <format attr='border-color' value='#000000' />
+                                <format attr='border-style' value='none' />
+                                <format attr='border-width' value='0' />
+                                <format attr='margin' value='4' />
+                              </zone-style>
+                            </zone>
+                          </zone>
+                        </zone>
+                      </zone>
+                      <zone h='38542' id='13' name=' Confirmed Deaths' show-title='false' w='25461' x='74014' y='21875'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone h='13281' id='27' name='Confirmed Deaths Ban ' show-title='false' w='25461' x='74014' y='8594'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                      <zone h='38541' id='35' name='Confirmed Deaths Bars' w='25461' x='74014' y='60417'>
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='8854' id='8' name='Map' pane-specification-id='0' param='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' type='color' w='24869' x='10892' y='85677' />
+        <zone count='6' dropdown='0' fixed-size='52' h='7422' id='9' is-fixed='true' name='Map' name1='Confirmed Cases' name2=' Confirmed Deaths' name3='Confirmed Cases Ban' name4='Confirmed Deaths Ban ' name5='Confirmed Cases Bars' name6='Confirmed Deaths Bars' show-title='false' synchronized='1' trailctrls='0' type='currpage' w='18373' x='79987' y='911' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontcolor='#ffffff'>Covid-19 Confirmed Cases by Location</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1850' minheight='1850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='38' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='39' param='vert' type='layout-flow' w='98950' x='525' y='1042'>
+                <zone h='7552' id='25' type='title' w='98950' x='525' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='90364' id='3' is-fixed='true' name='Map' w='48030' x='525' y='8594'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8854' id='8' name='Map' pane-specification-id='0' param='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' type='color' w='24869' x='10892' y='85677'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='94' h='13282' id='26' is-fixed='true' name='Confirmed Cases Ban' show-title='false' w='25459' x='48555' y='8594'>
+                  <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='94' h='13281' id='27' is-fixed='true' name='Confirmed Deaths Ban ' show-title='false' w='25461' x='74014' y='8594'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38542' id='13' is-fixed='true' name=' Confirmed Deaths' show-title='false' w='25461' x='74014' y='21875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38541' id='10' is-fixed='true' name='Confirmed Cases' show-title='false' w='25459' x='48555' y='21876'>
+                  <layout-cache minheight='100' minwidth='191' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38538' id='30' is-fixed='true' name='Confirmed Cases Bars' w='25459' x='48555' y='60417'>
+                  <layout-cache cell-count-h='10' non-cell-size-h='38' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38541' id='35' is-fixed='true' name='Confirmed Deaths Bars' w='25461' x='74014' y='60417'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone count='6' dropdown='0' fixed-size='52' h='7422' id='9' name='Map' name1='Confirmed Cases' name2=' Confirmed Deaths' name3='Confirmed Cases Ban' name4='Confirmed Deaths Ban ' name5='Confirmed Cases Bars' name6='Confirmed Deaths Bars' show-title='false' synchronized='1' trailctrls='0' type='currpage' w='18373' x='79987' y='911'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{FFF8E8E8-C678-439E-91C5-06D7A4F80DB9}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='Confirmed Cases(log)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-21#</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[yr:ObservationDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1F35DBC3-BA00-4A5D-91F4-2A1C4F9F23CA}' />
+    </window>
+    <window class='worksheet' name='Confirmed Deaths (log)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-21#</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[yr:ObservationDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{36D21546-F7A2-4A35-A1D9-62C5F7D88FB7}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name=' Confirmed Deaths'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-04-21#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Confirmed Cases'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-04-21#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Confirmed Cases Ban'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-04-21#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Confirmed Cases Bars'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-04-21#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Confirmed Deaths Ban '>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-04-21#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Confirmed Deaths Bars'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-04-21#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Map'>
+          <current-page>
+            <multibucket>
+              <bucket>#2020-04-21#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='10' />
+      <device-preview visible='true' />
+      <simple-id uuid='{98DC84BE-555E-45D5-B056-3CB6E1F59290}' />
+    </window>
+    <window class='worksheet' hidden='true' name=' Confirmed Deaths'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-21#</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[yr:ObservationDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{63CF7516-F0C0-4B5A-B299-3C8212E10FCA}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Confirmed Cases'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-21#</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:qk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[yr:ObservationDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2FA327CF-0DDF-4AAB-BFF0-610985D7EB88}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Confirmed Cases Ban'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-01-28#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[yr:ObservationDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9691F4CE-B58D-4DEF-B1FC-AD2B638E03B0}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Confirmed Cases Bars'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-21#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[yr:ObservationDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F30A880E-AF1F-4CD8-A914-E2445BCBD509}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Confirmed Cases Bars (Province)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-21#</bucket>
+          </multibucket>
+        </current-page>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='vertical'>
+              <node-reference>
+                <fields>
+                  <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]</field>
+                </fields>
+                <multibucket>
+                  <bucket>%null%</bucket>
+                </multibucket>
+              </node-reference>
+              <page-reference>
+                <fields>
+                  <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</field>
+                </fields>
+                <multibucket>
+                  <bucket>#2020-04-21#</bucket>
+                </multibucket>
+              </page-reference>
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[yr:ObservationDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{FB1D4630-9BFA-4EFD-8C18-8033A88EF7BF}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Confirmed Deaths Ban '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-21#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[yr:ObservationDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{16435F75-382D-43C8-8E3B-4064835FE21C}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Confirmed Deaths Bars'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-21#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[yr:ObservationDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{77BECEF4-64BF-428A-A579-F72E897EDB86}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Confirmed Deaths Bars (Province) '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-21#</bucket>
+          </multibucket>
+        </current-page>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='vertical'>
+              <node-reference>
+                <fields>
+                  <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]</field>
+                </fields>
+                <multibucket>
+                  <bucket>%null%</bucket>
+                </multibucket>
+              </node-reference>
+              <page-reference>
+                <fields>
+                  <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:ObservationDate:ok]</field>
+                </fields>
+                <multibucket>
+                  <bucket>#2020-04-21#</bucket>
+                </multibucket>
+              </page-reference>
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Province/State:nk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[yr:ObservationDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{24B0E162-80B3-4D7D-B489-DD448874DE20}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+            <card pane-specification-id='0' param='[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[sum:Confirmed:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2020-04-21#</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Calculation_55450614516482048:nk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[none:Country/Region:nk]</field>
+            <field>[federated.0vukj5x0ksnnzd1da2i0f0e6jtus].[yr:ObservationDate:ok]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{A86E70CE-7EA8-4A9C-9B45-C40F4556F617}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Confirmed Cases(log)' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Confirmed Deaths (log)' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      1vwPQBJ1V0EoDHMAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
